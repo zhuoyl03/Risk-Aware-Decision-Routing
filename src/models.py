@@ -1,5 +1,5 @@
 import torch
-from transformers import CLIPForImageClassification, ViTModelImageClassification
+from transformers import CLIPForImageClassification, ViTForImageClassification
 
 
 def initialize_model(model_name, num_classes, keep_frozen=False, use_pretrained=True):
@@ -7,7 +7,7 @@ def initialize_model(model_name, num_classes, keep_frozen=False, use_pretrained=
     input_image_size = 0
     resize_image_size = 0
     if model_name == "vit":
-        model = ViTModelImageClassification.from_pretrained('google/vit-base-patch16-224-in21k',
+        model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224-in21k',
                                                             num_labels=num_classes,
                                                             )
         input_image_size = 224
