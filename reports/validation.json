@@ -7,8 +7,9 @@
     "failed": 0
   },
   "full_pipeline": {
-    "command": "RADR_PYTHON=/home/leo/anaconda3/envs/RADR/bin/python bash scripts/reproduce.sh --full",
-    "outcome": "passed; extraction, three-seed experiments, real-image stress, figures and demo"
+    "command": "bash scripts/reproduce.sh --full",
+    "outcome": "passed; extraction, three-seed experiments, real-image stress, figures and demo",
+    "command_note": "The recorded run used an explicit local RADR_PYTHON interpreter path; that machine-specific prefix is omitted here."
   },
   "repeatability": {
     "command": "bash scripts/reproduce.sh --cached",
@@ -36,5 +37,5 @@
     "observed human-review experiment",
     "formal robustness certification"
   ],
-  "publication": "local only; no commit, push, or upload"
+  "publication": "Validation snapshot recorded before the repository was published."
 }
