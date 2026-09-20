@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-18",
+  "environment": "WSL Ubuntu-20.04, RADR Conda, RTX 4070 Laptop GPU",
+  "tests": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "passed": 23,
+    "failed": 0
+  },
+  "full_pipeline": {
+    "command": "RADR_PYTHON=/home/leo/anaconda3/envs/RADR/bin/python bash scripts/reproduce.sh --full",
+    "outcome": "passed; extraction, three-seed experiments, real-image stress, figures and demo"
+  },
+  "repeatability": {
+    "command": "bash scripts/reproduce.sh --cached",
+    "outcome": "all report CSVs byte-identical to the final full run"
+  },
+  "runtime": {
+    "command": "PYTHONPATH=src python scripts/validate_runtime.py",
+    "outcome": "passed",
+    "details": "runtime_validation.json"
+  },
+  "packaging": {
+    "command": "python -m pip wheel . --no-deps --no-build-isolation -w out/dist",
+    "outcome": "passed; wheel source matches working tree; isolated target install and console help tested"
+  },
+  "invalid_budget_exit_code": 2,
+  "mismatched_feature_cache": "rejected before loading",
+  "markdown_local_links_checked": 13,
+  "html_local_resources": "all present",
+  "scientific_figures": "five PNGs visually inspected; SVG counterparts generated",
+  "git_diff_check": "passed",
+  "original_source": "preserved byte-for-byte; see runtime_validation.json",
+  "not_run": [
+    "backbone retraining from scratch",
+    "fresh event-held-out evaluation",
+    "observed human-review experiment",
+    "formal robustness certification"
+  ],
+  "publication": "local only; no commit, push, or upload"
+}

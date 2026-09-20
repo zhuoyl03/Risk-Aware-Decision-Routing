@@ -1,0 +1,15 @@
+{
+  "same_seed_report_csvs_identical": true,
+  "compared_files": [
+    "reports/expert_baselines.csv",
+    "reports/guard_decisions.csv",
+    "reports/paired_bootstrap.csv",
+    "reports/image_corruptions.csv",
+    "reports/stress_tests.csv",
+    "reports/calibration_search.csv",
+    "reports/source_slices.csv",
+    "reports/summary.csv",
+    "reports/routing_curves.csv"
+  ],
+  "different_files": []
+}

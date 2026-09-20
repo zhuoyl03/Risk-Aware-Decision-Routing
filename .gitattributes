@@ -1,0 +1,3 @@
+# Preserve historical scripts and Matplotlib's generated SVG serialization.
+archive/legacy/*.py -whitespace
+reports/figures/*.svg -whitespace

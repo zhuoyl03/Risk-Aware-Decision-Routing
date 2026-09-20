@@ -99,7 +99,7 @@ def train_model(
                 if batch is None:
                     continue
 
-                inputs, labels = batch
+                inputs, labels, severity = batch
                 inputs = inputs.to(device, non_blocking=True)
                 labels = labels.to(device, non_blocking=True).long()
 
@@ -248,13 +248,13 @@ def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args = parser.parse_args()
     set_seed(args.seed)
-
+    model_name = args.arch
     # data
-    train_loader, dev_loader, test_loader, num_classes, _ = get_data_loader(args.task, args.batch_size)
+    train_loader, dev_loader, test_loader, num_classes, _, _, _ = get_data_loader(model_name, args.task, args.batch_size)
     dataloaders = {"train": train_loader, "val": dev_loader}
 
     # model
-    model, _, _ = initialize_model(args.name, num_classes, keep_frozen=False, use_pretrained=True)
+    model, _, _ = initialize_model(model_name, num_classes, keep_frozen=False, use_pretrained=True)
     model.to(device)
 
     # dirs / ckpts

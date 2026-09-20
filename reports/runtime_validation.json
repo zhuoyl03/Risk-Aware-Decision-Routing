@@ -1,0 +1,16 @@
+{
+  "real_image_inference": "20 images; matches cached features and routing",
+  "max_feature_difference": 1.4603137969970703e-06,
+  "max_logit_difference": 1.7881393432617188e-06,
+  "batch_review_slots": 4,
+  "full_test_deployment": "matches saved experiment actions, scores, masks and predictions",
+  "recomputed_metrics": "matches CSV report",
+  "dev_partition_check": "disjoint and exhaustive for all seeds",
+  "original_source_sha256": {
+    "train.py": "279efa669aa6398822e3ea2cb81ce4b4eaf8f62e7c5aefe539c55f96ad8d44aa",
+    "eval.py": "add47fca580bd0d320f2f5516b7fdedf9d050534d8cb218f992cfe7c3ccfeb9d",
+    "models.py": "25411c169f68b0d8f7775254dcf6a595565d85392e0c140c4bcbc6b7084f1080",
+    "process_data.py": "b0b41734547d770f6c807750dd055d18cf0e64b5e836fa6e5b1f9f1b8286ffe2"
+  },
+  "policy_reason": "candidate_not_supported_by_guard"
+}

@@ -1,0 +1,107 @@
+{
+  "seeds": [
+    17,
+    42,
+    73
+  ],
+  "budgets": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "tail_weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "selection_objective": "calibration mean_cost + 0.25 * CVaR90 at budget 0.2",
+  "severity_costs": [
+    1.0,
+    3.0,
+    8.0
+  ],
+  "python": "3.10.19",
+  "torch": "2.10.0+cu126",
+  "sklearn": "1.7.2",
+  "seconds": 6.160242804000063,
+  "feature_metadata": {
+    "checkpoint_sha256": "5cec02f3ffe1e93bb0c8a13725d7149e5d55b1832f66f12b6c8a8f0f77de1209",
+    "checkpoint_metadata": {
+      "epoch": 2,
+      "val_loss": 0.30445754530223834,
+      "val_acc": 0.8689296735423095
+    },
+    "torch": "2.10.0+cu126",
+    "python": "3.10.19",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "preprocessing": "PIL RGB; Resize256 bilinear; CenterCrop224; ToTensor; normalize .5/.5",
+    "precision": "float32, no autocast",
+    "truncated_images_allowed": true,
+    "train_subset_seed": 2026,
+    "arguments": {
+      "data_dir": "data",
+      "checkpoint": "out/models/stage2_best.pth",
+      "output": "out/features",
+      "train_limit": 12000,
+      "batch_size": 48,
+      "workers": 4
+    },
+    "audit": {
+      "train": {
+        "input_rows": 49353,
+        "invalid_labels": 0,
+        "missing_files": 0,
+        "duplicate_within_split": 2686,
+        "overlap_earlier_split": 0,
+        "retained_before_decode": 46667
+      },
+      "dev": {
+        "input_rows": 6157,
+        "invalid_labels": 0,
+        "missing_files": 0,
+        "duplicate_within_split": 18,
+        "overlap_earlier_split": 8,
+        "retained_before_decode": 6131
+      },
+      "test": {
+        "input_rows": 15688,
+        "invalid_labels": 0,
+        "missing_files": 0,
+        "duplicate_within_split": 36,
+        "overlap_earlier_split": 18,
+        "retained_before_decode": 15634
+      }
+    },
+    "train": {
+      "rows": 12000,
+      "seconds": 66.82478173000004,
+      "decode_failures": []
+    },
+    "dev": {
+      "rows": 6131,
+      "seconds": 34.36690768599988,
+      "decode_failures": []
+    },
+    "test": {
+      "rows": 15634,
+      "seconds": 86.68537520299992,
+      "decode_failures": []
+    },
+    "total_seconds": 267.8049894819999
+  },
+  "source_sha256": {
+    "src/radr/__init__.py": "91e054399957529379fbbd56d73732bf549f8f718f88e150ca4d83812b4e4db0",
+    "src/radr/data.py": "69a279cee49a8424a31378f5c8f086e1607486f85c5d192afe7c6a9a074f712f",
+    "src/radr/experiment.py": "963270cde65ccde3c6992c43a66deb3be7d708abd254be7931004ecaddc5e91b",
+    "src/radr/extract.py": "a0c8e60660e273fa8f7a9d1f16979dbff81c6665e8159f34d43b90bbbb55e510",
+    "src/radr/models.py": "911721d09614d6a3a4b620eb80af37a6027af8534c968e2656bc3cf54f9d1bcf",
+    "src/radr/risk.py": "2eea759a67e1943123f92249b806db89521558636113c34378415951a90b62ab"
+  },
+  "protocol_sha256": "edab07e63bd3a6000cd6ceaa6e6faa390f74c52d8d906939fa31c678b836a0a8"
+}
