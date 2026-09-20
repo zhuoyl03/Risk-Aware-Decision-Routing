@@ -2,7 +2,7 @@
 
 **When review time is limited, which disaster images deserve a second look?**
 
-[中文说明](README.zh-CN.md) · [Experiment results](reports/results.md) · [Method](docs/method.md) · [Reproduce the study](docs/reproduction.md)
+[Experiment results](reports/results.md) · [Method](docs/method.md) · [Reproduce the study](docs/reproduction.md)
 
 A disaster-image classifier can be accurate on average and still miss cases that
 matter. This project studies how to spend a limited review budget: use model
